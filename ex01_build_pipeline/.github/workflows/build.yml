@@ -1,0 +1,17 @@
+name: basic_pipeline
+
+on:
+    push:
+
+job:
+    check-env:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v4
+            
+            - run: python3 --version
+            
+            - run: pwd
+            
+            - run: ls -la
