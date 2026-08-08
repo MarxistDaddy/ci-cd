@@ -1,0 +1,21 @@
+name: multi_job_pipes
+
+on:
+    push:
+
+jobs:
+    check_backend:
+        runs-on: ubuntu-latest
+
+        steps:
+            uses: actions/checkout@v4
+
+            - run: echo "Testing backend"
+
+    check_frontend:
+        runs-on: ubuntu-latest
+
+        steps:
+            uses: actions/checkout@v4
+
+            - run: echo "Testing frontend" 
