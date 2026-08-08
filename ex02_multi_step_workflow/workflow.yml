@@ -1,0 +1,14 @@
+name: single_job_git_action
+
+on:
+    push:
+
+jobs:
+    runs-on: ubuntu-latest
+
+    steps:
+        - uses: actions/checkout@v4
+
+        - run: echo "Repository: ${{ github.repository }}"
+        - run: echo "Btanch ${{ github.ref_name }}"
+        - run: echo "Commit SHA: ${{ github.sha }}"
