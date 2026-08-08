@@ -3,7 +3,7 @@ name: basic_pipeline
 on:
     push:
 
-job:
+jobs:
     check-env:
         runs-on: ubuntu-latest
 
