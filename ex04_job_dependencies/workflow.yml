@@ -1,0 +1,19 @@
+name: dependencies
+
+on:
+    push:
+
+jobs:
+    backend:
+        runs-on: ubuntu-latest
+
+        steps:
+            - run: echo "Backend test passing"
+
+    frontend:
+        needs: backend
+
+        runs-on: ubuntu-latest
+
+        steps:
+            - run: echo "Building frontend after baclend success"
